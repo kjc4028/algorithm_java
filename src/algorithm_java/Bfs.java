@@ -27,12 +27,12 @@ public class Bfs {
 	}
 	
 	static void bfs(int start, int end){
-		Queue q = new LinkedList();
+		Queue<Node> q = new LinkedList<Node>();
 		
 		q.add(new Node(start, end));
 		int i = 1;
 		while(!q.isEmpty()){
-				Node node = (Node) q.poll();
+				Node node = q.poll();
 				vchk[node.x][node.y] = true;
 				//vchk[node.y][node.x] = true;
 				arrbase[node.x][node.y] = ""+i;
