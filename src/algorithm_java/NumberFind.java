@@ -35,6 +35,8 @@ M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0�
 public class NumberFind {
 
 	public static void main(String[] args) {
+		
+		//입력단 start
 		Scanner scan = new Scanner(System.in);
 
 		int N = scan.nextInt();
@@ -47,12 +49,10 @@ public class NumberFind {
 		
 		StringTokenizer stA = new StringTokenizer(arrAa);
 		
-		
-		  while(stA.hasMoreTokens()){ 
-			  A[arrA] = Integer.parseInt(stA.nextToken());
-			  arrA++; 
-		  }
-		 
+		while(stA.hasMoreTokens()){ 
+			A[arrA] = Integer.parseInt(stA.nextToken());
+			arrA++; 
+		}
 		
 		int M = scan.nextInt();
 		
@@ -70,21 +70,36 @@ public class NumberFind {
 		    arrB++;
 		}
 		
-		int frs[] = new int[M];
-
+		//입력단 end
+		
+		//core
+		
+		Arrays.sort(A); //정렬
+		
+		//TODO 이분탐색
 		for(int i = 0; i<B.length; i++){
-			frs[i] = 0;
-			for(int j = 0; j<A.length; j++){
-				if(B[i] == A[j]) {
-					frs[i] = 1;
+			
+			int left = 0;
+			int right = A.length-1;
+			int mid = 0;
+			int findKey = B[i]; //찾아야 하는 숫자
+			int rs = 0; //존재유무 플래그값
+			
+			while(left <= right){
+				mid = (left + right) / 2;
+				
+				if(findKey == A[mid]){
+					rs = 1;
 					break;
+				} else if(findKey < A[mid]){
+					right = mid-1;
+				} else if(findKey > A[mid]){
+					left = mid+1;
 				}
+				
 			}
-			System.out.println(frs[i]);
+			System.out.println(rs);
 		}
-		
-		
-		//System.out.println(Arrays.toString(frs));
 	}
 }
 
