@@ -31,6 +31,7 @@ M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0�
 0
 0
 1
+
  */
 public class NumberFind {
 
@@ -72,6 +73,7 @@ public class NumberFind {
 		
 		int frs[] = new int[M];
 
+		//TODO 이진검색으로 확인해야 할 것 같음...
 		for(int i = 0; i<B.length; i++){
 			frs[i] = 0;
 			for(int j = 0; j<A.length; j++){
