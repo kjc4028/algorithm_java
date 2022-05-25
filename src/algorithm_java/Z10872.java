@@ -1,3 +1,5 @@
+package algorithm_java;
+
 import java.util.Scanner;
 
 public class Z10872 {
