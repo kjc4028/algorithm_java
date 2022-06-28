@@ -1,4 +1,3 @@
-package algorithm_java;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
