@@ -5,7 +5,7 @@ import java.util.*;
  * https://www.acmicpc.net/problem/7562
  * DFS 방식은 체스판 길이가 커짐에 따라서 StackOverflowError 발생하는 것 확인
  */
-class Nights7562 {
+class Nights7562DFS {
 
 
 	static int[] moveX = {2,2,-2,-2,1,-1,1,-1};
@@ -42,6 +42,7 @@ class Nights7562 {
 			System.out.println(arrVChk[endX][endY]);
 						
 		}
+		scan.close();
 	}
 	
 	public static void dfs(int x, int y, int eX, int eY, int maxN, int[][] visitChk){

@@ -13,6 +13,7 @@ public class Z10872 {
 		
 		factorial(N);
 		System.out.println(result);
+		scan.close();
 		
 	}
 	

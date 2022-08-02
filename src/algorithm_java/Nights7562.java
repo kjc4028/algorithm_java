@@ -79,7 +79,8 @@ class Nights7562 {
 						}
 				}
 			}
-			System.out.println(arrVChk[endInt1][endInt2]);			
+			System.out.println(arrVChk[endInt1][endInt2]);		
+			scan.close();	
 		}
 	}	
 

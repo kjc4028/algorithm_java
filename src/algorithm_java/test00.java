@@ -1,17 +1,12 @@
 package algorithm_java;
 
-import java.util.ArrayList;
-
 public class test00 {
     
     public static void main(String[] args) {
                 // write your code in Java SE 11
                 int N = 28;
-                ArrayList<Integer> list = new ArrayList<Integer>();
                 int getN = N;
-                int sumNum = 0;
                 while((getN/10) > 0){
-                    sumNum += getN%10;
                     getN = getN/10;
                 }
         

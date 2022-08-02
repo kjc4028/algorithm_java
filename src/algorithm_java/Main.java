@@ -9,7 +9,8 @@ class Main {
 		Scanner scan = new Scanner(System.in);
 
 		int N = scan.nextInt(); // 입력받을 K 값
-		System.out.println();
+		System.out.println(N);
+		scan.close();
 	}
 
 }

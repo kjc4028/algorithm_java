@@ -37,5 +37,6 @@ public class Zero {
 		}
 		
 		System.out.println(totalSum);
+		scan.close();
 	}
 }

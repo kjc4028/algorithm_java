@@ -51,7 +51,7 @@ class Virus2606 {
 		}
 
 		System.out.println(cnt);
-
+		scan.close();
 	}
 
 }

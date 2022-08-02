@@ -79,7 +79,7 @@ public class Z2447 {
 		}
 		
 		System.out.println(bf.toString());
-		
+		scan.close();
 	}
 	
 	

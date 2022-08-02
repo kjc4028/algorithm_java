@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Stack;
-import java.util.StringTokenizer;
 
 public class Z1874 {
     
@@ -12,7 +11,6 @@ public class Z1874 {
         //스택의 가장 위에 값이 해당 수열의 값보다 작은 경우 NO
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st;
 
         int n = Integer.parseInt(br.readLine());
 

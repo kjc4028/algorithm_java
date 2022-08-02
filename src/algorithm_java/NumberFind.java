@@ -76,7 +76,6 @@ public class NumberFind {
 		
 		Arrays.sort(A); //정렬
 		
-		//TODO 이분탐색
 		for(int i = 0; i<B.length; i++){
 			
 			int left = 0;
@@ -100,5 +99,6 @@ public class NumberFind {
 			}
 			System.out.println(rs);
 		}
+		scan.close();
 	}
 }
