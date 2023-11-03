@@ -10,26 +10,22 @@ import java.util.StringTokenizer;
  */
 public class BOJ15649 {
 
-    static int N = 0; //수 범위
-    static int M = 0; // 선택가능 수
-    static boolean[] visit; //방문여부
-    static int[] arr;
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
-
         st = new StringTokenizer(br.readLine());
 
-        N = Integer.parseInt(st.nextToken()); 
-        M = Integer.parseInt(st.nextToken()); 
+        int N = Integer.parseInt(st.nextToken()); //수 범위
+        int M = Integer.parseInt(st.nextToken());  // 선택가능 수
 
-        visit = new boolean[N];
-        arr = new int[M];
-        dfs(N,M,0);
+        boolean[] visit = new boolean[N]; //방문 여부
+        int[] arr = new int[M]; //출력보관
+
+        dfs(N,M,0,visit,arr);
     }
 
-    public static void dfs(int N, int M, int depth){
+    public static void dfs(int N, int M, int depth,boolean[] visit, int[] arr){
         
         if(M == depth){
             for (int i : arr) {
@@ -43,7 +39,7 @@ public class BOJ15649 {
             if(!visit[i]){
                 visit[i] = true;
                 arr[depth]=i+1;        
-                dfs(N,M,depth+1);   
+                dfs(N,M,depth+1,visit,arr);   
                 visit[i] = false;        
             }
         }
