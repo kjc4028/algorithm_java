@@ -8,6 +8,7 @@ public class BOJ15652 {
     static int N;
     static int M;
     static int[] arr;
+    static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
@@ -19,14 +20,17 @@ public class BOJ15652 {
         arr = new int[M];
 
         dfs(0,0);
+
+        System.out.println(sb.toString());
     }
 
     public static void dfs(int depth, int from){
         if(depth == M){
             for (int i : arr) {
-                System.out.print(i + " ");
+                sb.append(i);
+                sb.append(" ");
             }
-            System.out.println();
+            sb.append("\n");
             return;
         }
 
