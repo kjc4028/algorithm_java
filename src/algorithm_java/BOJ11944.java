@@ -3,6 +3,9 @@ package algorithm_java;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+/**
+ * N을 N번 그리는데 M 자리까지만
+ */
 public class BOJ11944 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -15,22 +18,22 @@ public class BOJ11944 {
         
         int M = Integer.parseInt(st.nextToken());
         
-        
-        int nLength = str.length();
-        
-        int cnt = M/nLength;
-        
-        int mod = M%nLength;
-        
         StringBuffer sb = new StringBuffer();
         
-        for (int i = 0; i < cnt; i++) {
+        for (int i = 0; i < N; i++) {
             sb.append(str);
+            if(sb.length() >= M){
+                break;
+            }
+        }
+        String rsStr = "";
+        if(sb.length() > M){
+            rsStr = sb.subSequence(0, M).toString();
+        } else {
+            rsStr = sb.toString();
         }
         
-        sb.append(str.substring(0, mod));
-        
-        System.out.println(sb.toString());
+        System.out.println(rsStr);
         
         
     }
